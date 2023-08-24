@@ -1,0 +1,6 @@
+SELECT P.Name AS ProductName, C.Name AS CategoryName
+FROM Product AS P
+INNER JOIN ProductCategory AS PC ON P.ProductID = PC.ProductID
+INNER JOIN Category AS C ON PC.CategoryID = C.CategoryID;
+
+//INNER JOIN заберет все продукты. Даже, если у продукта нет категории.
